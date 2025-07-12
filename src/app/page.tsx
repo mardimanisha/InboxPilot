@@ -1,9 +1,9 @@
-import HeroSection from "@/components/landing/HeroSection";
+import HeroSection from "@/pages/landing/HeroSection";
 import Header from "@/components/layout/Header";
-import StatsSection from "@/components/landing/StatsSection";
-import FeaturesSection from "@/components/landing/FeaturesSection";
-import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import PricingSection from "@/components/landing/PricingSection";
+import StatsSection from "@/pages/landing/StatsSection";
+import FeaturesSection from "@/pages/landing/FeaturesSection";
+import HowItWorksSection from "@/pages/landing/HowItWorksSection";
+import PricingSection from "@/pages/landing/PricingSection";
 import CTASection from "@/components/layout/CTASection";
 import Footer from "@/components/layout/Footer";
 

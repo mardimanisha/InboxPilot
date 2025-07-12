@@ -1,6 +1,6 @@
 import { features } from "@/data/features";
 import FeatureCard from "@/components/common/FeatureCard";
-import SectionTitle from "../common/SectionTitle";
+import SectionTitle from "../../components/common/SectionTitle";
 
 
 export default function FeaturesSection() {
