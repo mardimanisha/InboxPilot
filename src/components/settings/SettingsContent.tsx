@@ -1,22 +1,17 @@
-// settings.tsx (Refactored)
 "use client";
 
 import React, { useState, useEffect } from "react";
 import { toast } from "sonner";
 
-// Components
-
-
 // Hooks
 import { useSettings } from "@/hooks/useSettings";
 
 // Constants
-import { 
-  NAVIGATION_ITEMS, 
+import {  
   DEFAULT_USER, 
   CONNECTED_SERVICES, 
   INTEGRATIONS 
-} from "@/constants/settings";
+} from "@/data/settings";
 
 // Services
 import { SettingsService } from "@/services/settingsService";
@@ -153,10 +148,19 @@ export default function SettingsPage() {
   };
 
   return (
-    <div className="h-screen bg-gray-50 flex">
+    <div className="min-h-screen bg-gray-50">
         
-        <div className="flex-1 px-6 py-6 max-w-4xl mx-auto overflow-auto">
-          <div className="space-y-6">
+        <div className="px-6 py-6 max-w-4xl mx-auto overflow-y-auto scrollbar-hide">
+          <style jsx>{`
+            .scrollbar-hide {
+              -ms-overflow-style: none;  /* Internet Explorer 10+ */
+              scrollbar-width: none;  /* Firefox */
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+              display: none;  /* Safari and Chrome */
+            }
+          `}</style>
+          <div className="space-y-6 pb-8">
             <AccountSettingsSection
               connectedServices={CONNECTED_SERVICES}
               displayName={displayName}
