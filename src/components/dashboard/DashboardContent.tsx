@@ -1,4 +1,4 @@
-// DashboardMainContent.tsx (UI Wrapper)
+
 "use client"
 
 import { useDashboardEmails } from "@/hooks/useDashboardEmails"
@@ -7,7 +7,7 @@ import { SummaryCard } from "./SummaryCard"
 import { EmailCategory } from "@/types/email"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Filter, Plus, Mail } from "lucide-react"
+import { Plus, Mail } from "lucide-react"
 
 export default function DashboardContent() {
   const {
@@ -35,7 +35,7 @@ export default function DashboardContent() {
               <CardDescription>AI-categorized emails from your inbox</CardDescription>
             </div>
             <div className="flex items-center space-x-2">
-                <select
+              <select
                 aria-label="Filter emails by category"
                 value={selectedFilter}
                 onChange={(e) => handleFilterChange(e.target.value)}
@@ -47,10 +47,7 @@ export default function DashboardContent() {
                 <option value="fyi">FYI</option>
                 <option value="ignore">Ignore</option>
               </select>
-              <Button variant="outline" size="sm">
-                <Filter className="h-4 w-4 mr-2" />
-                Filter
-              </Button>
+              
               <Button size="sm" className="bg-gray-900 text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Compose
