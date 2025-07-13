@@ -1,3 +1,5 @@
+import { EmailCategory } from "@/types/email";
+
 export const mockEmails = [
   {
     id: 1,
@@ -7,7 +9,7 @@ export const mockEmails = [
     preview:
       "Please prepare your department's Q4 report for tomorrow's meeting...",
     unread: true,
-    category: "urgent",
+    category: "urgent" as EmailCategory,
   },
   {
     id: 2,
@@ -16,7 +18,7 @@ export const mockEmails = [
     time: "4 hours ago",
     preview: "We're experiencing critical issues with the production server...",
     unread: true,
-    category: "urgent",
+    category: "urgent" as EmailCategory,
   },
   {
     id: 3,
@@ -25,7 +27,7 @@ export const mockEmails = [
     time: "1 day ago",
     preview: "Your annual performance review is due by end of week...",
     unread: false,
-    category: "actionNeeded",
+    category: "actionNeeded" as EmailCategory,
   },
   {
     id: 4,
@@ -34,7 +36,7 @@ export const mockEmails = [
     time: "2 days ago",
     preview: "Please review and approve the attached expense reports...",
     unread: true,
-    category: "actionNeeded",
+    category: "actionNeeded" as EmailCategory,
   },
   {
     id: 5,
@@ -44,7 +46,7 @@ export const mockEmails = [
     preview:
       "We need to update the project timeline for the client presentation...",
     unread: false,
-    category: "actionNeeded",
+    category: "actionNeeded" as EmailCategory,
   },
   {
     id: 6,
@@ -54,7 +56,7 @@ export const mockEmails = [
     preview:
       "This week's highlights include new team members and upcoming events...",
     unread: false,
-    category: "fyi",
+    category: "fyi" as EmailCategory,
   },
   {
     id: 7,
@@ -63,7 +65,7 @@ export const mockEmails = [
     time: "2 days ago",
     preview: "Scheduled maintenance will occur this weekend from 2-4 AM...",
     unread: false,
-    category: "fyi",
+    category: "fyi" as EmailCategory,
   },
   {
     id: 8,
@@ -72,6 +74,6 @@ export const mockEmails = [
     time: "3 days ago",
     preview: "Don't miss out on our biggest sale of the year...",
     unread: false,
-    category: "ignore",
+    category: "ignore" as EmailCategory,
   },
 ];

@@ -4,14 +4,14 @@ import { Bell, Search } from 'lucide-react'
 import { Badge } from '../ui/badge'
 import { Input } from '../ui/input'
 
-export default function DashboardHeader() {
+export default function DashboardHeader({ title, badge }: { title: string; badge: string }) {
     return (
         <header className="bg-white border-b border-gray-200 flex-shrink-0">
           <div className="px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-6">
-                <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
-                <Badge className="bg-green-50 text-green-700 border-green-200">✨ AI Active</Badge>
+              <h1 className="text-2xl font-semibold text-gray-900">{ title }</h1>
+              <Badge className="bg-green-50 text-green-700 border-green-200"> {badge}</Badge>
               </div>
 
               <div className="flex items-center space-x-4">

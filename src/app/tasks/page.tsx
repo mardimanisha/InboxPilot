@@ -1,11 +1,12 @@
 
-import Sidebar from '@/components/layout/Sidebar'
+import AppLayout from '@/components/layout/AppLayout'
+import TaskContent from '@/components/tasks/TaskContent'
 import React from 'react'
 
 export default function page() {
     return (
-        <div>
-            <Sidebar />
-        </div>
+        <AppLayout title="Tasks" badge="✅ Task Manager">
+            <TaskContent />
+        </AppLayout>
     )
 }
