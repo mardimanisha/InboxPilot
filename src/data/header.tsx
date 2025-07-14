@@ -1,8 +1,6 @@
 // data/headers.ts
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
-import { Edit, Save, LogOut, Plus, Bell, Search } from "lucide-react";
+import { Edit, LogOut, Plus, Bell, Search } from "lucide-react";
 import { HeaderConfig } from "@/types/header";
 
 export const headerConfigs: Record<string, HeaderConfig> = {
