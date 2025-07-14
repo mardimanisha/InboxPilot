@@ -1,4 +1,4 @@
-
+'use client';
 import AppLayout from '@/components/layout/AppLayout'
 import ProfileContent from '@/components/profile/ProfileContent'
 import { headerConfigs } from '@/data/header'
