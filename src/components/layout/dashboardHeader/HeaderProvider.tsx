@@ -1,6 +1,6 @@
 
 import { ReactNode } from "react";
-import { HeaderProvider as ContextProvider } from "@/context/header-context";
+import { HeaderProvider as ContextProvider } from "@/contexts/header-context";
 import { HeaderConfig } from "@/types/header";
 import { DashboardHeader } from "./DashboardHeader";
 

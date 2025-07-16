@@ -1,6 +1,11 @@
 
-import { useHeaderContext } from "@/context/header-context";
+import { useHeaderContext } from "@/contexts/header-context";
 import { Input } from "@/components/ui/input";
+
+interface Action {
+  id: string;
+  element: React.ReactNode;
+}
 
 export const HeaderActions = () => {
   const { search, actions } = useHeaderContext();
@@ -16,7 +21,7 @@ export const HeaderActions = () => {
           />
         </div>
       )}
-      {actions?.map((action) => (
+      {actions?.map((action: Action) => (
         <div key={action.id}>{action.element}</div>
       ))}
     </div>

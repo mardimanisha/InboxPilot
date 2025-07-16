@@ -1,5 +1,5 @@
 
-import { useHeaderContext } from "@/context/header-context";
+import { useHeaderContext } from "@/contexts/header-context";
 import { Badge } from "@/components/ui/badge";
 
 export const HeaderTitle = () => {

@@ -20,9 +20,6 @@ export default function CTASection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Button variant="ghost" size="lg" className="px-8 py-4 text-lg text-gray-300 hover:text-gray-900">
-              Talk to sales
-            </Button>
           </div>
           <p className="text-gray-400 mt-6">14-day free trial • No credit card required</p>
         </div>
