@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${process.env.NEXT_PUBLIC_URL}/onboarding`
+          redirectTo: `${process.env.NEXT_PUBLIC_URL}/auth/callback`
         }
       })
 
