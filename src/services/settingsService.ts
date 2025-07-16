@@ -1,4 +1,3 @@
-// services/settingsService.ts
 import { UserSettings } from "@/types/settings";
 
 export class SettingsService {

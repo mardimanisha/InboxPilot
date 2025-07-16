@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { AccountStats as AccountStatsType } from '@/types/profile';
-import { formatAccountStat } from '@/utils/profile';
+import { formatAccountStat } from '@/lib/profile';
 
 interface AccountStatsProps {
   stats: AccountStatsType;

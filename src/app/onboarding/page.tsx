@@ -1,7 +1,7 @@
 "use client"
 
-import OnboardingCard from "@/pages/onboarding/component/OnboardingCard"
-import { useOnboardingProgress } from "@/pages/onboarding/hooks/useOnboardingProgress"
+import { useOnboardingProgress } from "@/hooks/useOnboardingProgress"
+import OnboardingCard from "@/components/onboarding/OnboardingCard"
 import { Mail } from "lucide-react"
 
 export default function OnboardingPage() {

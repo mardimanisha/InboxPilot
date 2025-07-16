@@ -1,4 +1,4 @@
-// hooks/useSettings.ts
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, useCallback } from "react";
 import { UserSettings } from "@/types/settings";
 import { DEFAULT_SETTINGS } from "@/data/settings";

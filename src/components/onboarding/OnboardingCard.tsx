@@ -1,15 +1,8 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
-import { steps } from "@/data/onboardingSteps"
 import { CheckCircle, Loader2 } from "lucide-react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
+import { steps } from "@/data/onboardingSteps"
+import { Progress } from "../ui/progress"
 import StepList from "./StepList"
-
 
 
 type OnboardingCardProps = {

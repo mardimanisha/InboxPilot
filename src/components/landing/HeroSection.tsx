@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
-import { Button } from '../../components/common/Button'
+import { Button } from '../common/Button'
 
 export default function HeroSection() {
     return (

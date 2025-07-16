@@ -1,7 +1,6 @@
 "use client"
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import { createClient } from '@supabase/supabase-js'
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!)
+import supabase from '@/lib/supabaseClient'
 import { User as SupabaseUser, Session, AuthChangeEvent } from '@supabase/auth-js'
 import { useRouter } from 'next/navigation'
 
@@ -48,6 +47,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       setUser(session?.user ?? null)
     } catch (error) {
+      console.error('Error initializing auth:', error)
       setError('Failed to initialize authentication')
     } finally {
       setIsLoading(false)

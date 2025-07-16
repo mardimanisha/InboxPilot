@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Camera } from "lucide-react";
 import { Profile } from '@/types/profile';
-import { getProfileAvatarFallback } from '@/utils/profile';
+import { getProfileAvatarFallback } from '@/lib/profile';
 
 
 interface ProfileAvatarProps {

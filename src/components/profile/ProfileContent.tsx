@@ -14,11 +14,8 @@ export default function ProfilePage() {
   const {
     profile,
     isEditing,
-    isLoading,
     updateProfile,
-    handleEditToggle,
-    handleSave,
-    handleCancel,
+
   } = useProfile();
 
   const handleImageUpload = () => {

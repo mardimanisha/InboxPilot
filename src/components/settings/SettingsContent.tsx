@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -44,12 +45,6 @@ export default function SettingsPage() {
       toast.error(error);
     }
   }, [error]);
-
-  // Handlers
-  const handleLogout = () => {
-    console.log("Logging out...");
-    // Implement logout logic
-  };
 
   const handleDisconnectService = async (serviceId: string) => {
     try {
