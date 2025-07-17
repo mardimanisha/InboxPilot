@@ -62,7 +62,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'https://inbox-pilot-nine.vercel.app/auth/callback'
+          redirectTo: 'https://inbox-pilot-nine.vercel.app/onboarding'
         }
       })
 
