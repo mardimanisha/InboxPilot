@@ -1,4 +1,3 @@
-
 "use client"
 
 import { useDashboardEmails } from "@/hooks/useDashboardEmails"
@@ -8,21 +7,34 @@ import { EmailCategory } from "@/types/email"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Plus, Mail } from "lucide-react"
+import { useRouter } from "next/navigation"
+
+type FilterType = EmailCategory | "all";
 
 export default function DashboardContent() {
+  const router = useRouter()
   const {
     filteredEmails,
-    mockEmails,
+    emails,
     selectedFilter,
     handleFilterChange,
+    loading,
+    error,
+    getCategoryColor,
+    getCategoryIcon
   } = useDashboardEmails()
+
+  // If no emails are found, trigger processing
+  if (emails.length === 0 && !loading && !error) {
+    router.push('/api/process-emails')
+  }
 
   return (
     <div className="space-y-8">
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-        {(["urgent", "actionNeeded", "fyi", "ignore"] as EmailCategory[]).map((category) => (
-          <SummaryCard key={category} category={category} emails={mockEmails} />
+        {(['urgent', 'actionNeeded', 'fyi', 'ignore'] as EmailCategory[]).map((category) => (
+          <SummaryCard key={category} category={category} emails={emails} />
         ))}
       </div>
 
@@ -38,7 +50,7 @@ export default function DashboardContent() {
               <select
                 aria-label="Filter emails by category"
                 value={selectedFilter}
-                onChange={(e) => handleFilterChange(e.target.value)}
+                onChange={(e) => handleFilterChange(e.target.value as FilterType)}
                 className="p-2 border border-gray-200 rounded-lg text-sm bg-white"
               >
                 <option value="all">All Emails</option>
@@ -47,7 +59,6 @@ export default function DashboardContent() {
                 <option value="fyi">FYI</option>
                 <option value="ignore">Ignore</option>
               </select>
-              
               <Button size="sm" className="bg-gray-900 text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Compose
@@ -56,14 +67,28 @@ export default function DashboardContent() {
           </div>
         </CardHeader>
 
-        <CardContent className="pt-0 space-y-4">
-          {filteredEmails.length === 0 ? (
-            <div className="text-center py-8">
-              <Mail className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-500">No emails found for the selected filter.</p>
+        <CardContent>
+          {loading && (
+            <div className="flex items-center justify-center p-4">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
             </div>
-          ) : (
-            filteredEmails.map((email) => <EmailCard key={email.id} email={email} />)
+          )}
+          {error && (
+            <div className="text-red-500 text-center p-4">
+              Error loading emails: {error}
+            </div>
+          )}
+          {!loading && !error && filteredEmails.length === 0 && (
+            <div className="text-center py-8">
+              <p className="text-gray-500">No emails found in this category</p>
+            </div>
+          )}
+          {!loading && !error && filteredEmails.length > 0 && (
+            <div className="space-y-4">
+              {filteredEmails.map((email) => (
+                <EmailCard key={email.id} email={email} />
+              ))}
+            </div>
           )}
         </CardContent>
       </Card>

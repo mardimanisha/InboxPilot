@@ -1,16 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { EmailCategory } from "@/types/email";
-import { mockEmails } from "@/data/emails";
+type FilterType = EmailCategory | "all";
 import { AlertCircle, Clock, Info, Mail, X } from "lucide-react";
+import supabase from "@/lib/supabaseClient";
+import { ProcessedEmail } from "../../types/gmail";
+import { RedisService } from "../../backend/src/services/redis";
+
 
 export function useDashboardEmails() {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  const [selectedFilter, setSelectedFilter] = useState<FilterType>("all");
+  const [emails, setEmails] = useState<ProcessedEmail[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const filteredEmails = mockEmails.filter((email) =>
-    selectedFilter === "all" ? true : email.category === selectedFilter
-  );
+  useEffect(() => {
+    const fetchEmails = async () => {
+      try {
+        setLoading(true);
+        setError(null);
+        
+        // Get user ID from Supabase
+        const { data: { session }, error: sessionError } = await supabase.auth.getSession();
+        if (sessionError || !session?.user) {
+          throw new Error('User not authenticated');
+        }
 
-  const handleFilterChange = (value: string) => {
+        // Fetch processed emails from Redis
+        const redisService = RedisService.getInstance();
+        const processedEmails = await redisService.getProcessedEmails(session.user.id);
+        
+        // Sort emails by processedAt timestamp (newest first)
+        const sortedEmails = processedEmails.sort((a, b) => 
+          new Date(b.processedAt).getTime() - new Date(a.processedAt).getTime()
+        );
+
+        setEmails(sortedEmails);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'Failed to fetch emails');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchEmails();
+
+    // Set up a 30-second refresh interval
+    const refreshInterval = setInterval(fetchEmails, 30000);
+    return () => clearInterval(refreshInterval);
+  }, []);
+
+  const filteredEmails = emails.filter((email) => {
+    if (selectedFilter === 'all') return true;
+    return email.classification.category === selectedFilter;
+  });
+
+  const handleFilterChange = (value: FilterType) => {
     setSelectedFilter(value);
   };
 
@@ -45,11 +89,13 @@ export function useDashboardEmails() {
   };
 
   return {
-    mockEmails,
+    emails,
     filteredEmails,
     selectedFilter,
     handleFilterChange,
     getCategoryIcon,
     getCategoryColor,
+    loading,
+    error
   };
 }

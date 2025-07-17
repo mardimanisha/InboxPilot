@@ -3,31 +3,38 @@ import { GmailService, GmailServiceConfig, GmailScanRequest, GmailScanResponse, 
 import { User } from '../types/auth'
 import { supabase } from '../lib/supabase'
 import { GmailApiClient } from './gmailClient'
+import { RedisQueueJob } from './redis'
+import { OpenAIService } from './openai'
+import { RedisService } from './redis'
 
 const logger = createLogger('GmailService')
 
 export class GmailServiceImpl implements GmailService {
   private config: GmailServiceConfig
   private readonly MAX_EMAILS_PER_REQUEST = 100
-  private gmailClient?: GmailApiClient
 
-  private constructor() {
+  private constructor(private gmailClient: GmailApiClient | undefined = undefined) {
     this.config = {
       apiKey: process.env.GMAIL_API_KEY || '',
       clientId: process.env.GMAIL_CLIENT_ID || '',
       clientSecret: process.env.GMAIL_CLIENT_SECRET || ''
     };
-    this.gmailClient = undefined; // Initialize to undefined
+  }
+
+  public getConfig(): GmailServiceConfig {
+    return { ...this.config };
   }
 
   static async create(): Promise<GmailServiceImpl> {
-    const service = new GmailServiceImpl();
     const { data, error: sessionError } = await supabase.auth.getSession();
     if (sessionError || !data?.session?.user) {
       throw new Error('User not authenticated');
     }
-    service.gmailClient = new GmailApiClient(data.session.user);
-    return service;
+    return new GmailServiceImpl(new GmailApiClient(data.session.user));
+  }
+
+  static createForTest(client: GmailApiClient): GmailServiceImpl {
+    return new GmailServiceImpl(client);
   }
 
   async initialize(config: GmailServiceConfig): Promise<void> {
@@ -39,23 +46,27 @@ export class GmailServiceImpl implements GmailService {
     try {
       logger.info('Starting inbox scan', { userId: request.userId })
       
-      // Fetch user's Gmail access token from Supabase
+      // Initialize Gmail client
       const { data: { session }, error: sessionError } = await supabase.auth.getSession()
       if (sessionError || !session?.user) {
         throw new Error('User not authenticated')
       }
+      const client = this.gmailClient || new GmailApiClient(session.user)
+      
+      // Fetch emails from Gmail API
+      const emails = await client.fetchEmails(
+        request.maxResults || this.MAX_EMAILS_PER_REQUEST,
+        request.pageToken
+      )
 
-      // Initialize Gmail client with user from session
-      this.gmailClient = new GmailApiClient(session.user)
-      
-      // Fetch emails using Gmail API
-      const emails = await this.gmailClient.fetchEmails(request.maxResults, request.pageToken)
-      
       // Classify emails
       const classifications = await this.classifyEmails(emails)
-      
-      // Store emails and classifications in Supabase
+
+      // Store emails and classifications
       await this.storeEmailsAndClassifications(request.userId, emails, classifications)
+
+      // Add to Redis queue for background processing
+      await this.addToProcessingQueue(request.userId, emails, classifications)
 
       return {
         emails,
@@ -63,38 +74,40 @@ export class GmailServiceImpl implements GmailService {
         totalScanned: emails.length
       }
     } catch (error) {
-      logger.error('Error scanning inbox', { error })
+      logger.error('Error scanning inbox', { error, userId: request.userId })
       throw error
     }
   }
 
   async classifyEmails(emails: GmailEmail[]): Promise<EmailClassification[]> {
-    return emails.map(email => {
-      // Basic classification logic based on email properties
-      const classification: EmailClassification = {
-        id: email.id,
-        category: 'fyi',
-        confidence: 0.8,
-        reason: 'Default classification'
+    try {
+      const openaiService = OpenAIService.getInstance();
+      const emailContents = emails.map(email => email.body);
+      
+      // Classify emails in batches of 5 to avoid API rate limits
+      const batchSize = 5;
+      const classifications: EmailClassification[] = [];
+      
+      for (let i = 0; i < emailContents.length; i += batchSize) {
+        const batch = emailContents.slice(i, i + batchSize);
+        const batchClassifications = await openaiService.batchClassifyEmails(batch);
+        classifications.push(...batchClassifications);
       }
 
-      // Check for urgent indicators in subject
-      const urgentKeywords = ['urgent', 'immediate', 'asap', 'priority']
-      if (urgentKeywords.some(keyword => email.subject.toLowerCase().includes(keyword))) {
-        classification.category = 'urgent'
-        classification.confidence = 0.95
-        classification.reason = 'Contains urgent keywords in subject'
-      }
-
-      // Check for action items
-      if (email.body.toLowerCase().includes('please')) {
-        classification.category = 'action_needed'
-        classification.confidence = 0.85
-        classification.reason = 'Contains action request'
-      }
-
-      return classification
-    })
+      // Map classifications back to original email IDs
+      return emails.map(email => {
+        const classification = classifications.find(c => c.id === email.id);
+        return {
+          id: email.id,
+          category: classification?.category || 'normal',
+          confidence: classification?.confidence || 0.8,
+          reason: classification?.reason || 'Initial classification'
+        } as EmailClassification;
+      });
+    } catch (error) {
+      logger.error('Error classifying emails', { error });
+      throw error;
+    }
   }
 
   async storeEmailsAndClassifications(
@@ -103,12 +116,9 @@ export class GmailServiceImpl implements GmailService {
     classifications: EmailClassification[]
   ): Promise<void> {
     try {
-      logger.info('Storing emails and classifications', { userId })
-      
-      // Store emails in Supabase
-      const emailInserts = emails.map(email => ({
+      const emailInserts = emails.map((email, index) => ({
         user_id: userId,
-        email_id: email.id,
+        gmail_id: email.id,
         thread_id: email.threadId,
         from: email.from,
         to: email.to,
@@ -116,9 +126,14 @@ export class GmailServiceImpl implements GmailService {
         body: email.body,
         date: email.date,
         labels: email.labels,
-        importance: email.importance
+        importance: email.importance,
+        classification: classifications[index].category,
+        confidence: classifications[index].confidence,
+        classification_reason: classifications[index].reason,
+        created_at: new Date().toISOString()
       }))
 
+      // Store emails
       const { error: emailError } = await supabase
         .from('emails')
         .upsert(emailInserts)
@@ -128,25 +143,31 @@ export class GmailServiceImpl implements GmailService {
         throw emailError
       }
 
-      // Store classifications
-      const classificationInserts = classifications.map(classification => ({
-        user_id: userId,
-        email_id: classification.id,
-        category: classification.category,
-        confidence: classification.confidence,
-        reason: classification.reason
-      }))
-
-      const { error: classificationError } = await supabase
-        .from('email_classifications')
-        .upsert(classificationInserts)
-        .select()
-
-      if (classificationError) {
-        throw classificationError
-      }
+      logger.info('Successfully stored emails and classifications', { userId, emailCount: emails.length })
     } catch (error) {
       logger.error('Error storing emails and classifications', { error })
+      throw error
+    }
+  }
+
+  async addToProcessingQueue(
+    userId: string,
+    emails: GmailEmail[],
+    classifications: EmailClassification[]
+  ): Promise<void> {
+    try {
+      // Create Redis job
+      const job: RedisQueueJob = {
+        userId,
+        emails,
+        classifications,
+        timestamp: new Date().toISOString()
+      }
+
+      // Add to Redis queue using RedisService
+      await RedisService.getInstance().addToQueue(job)
+    } catch (error) {
+      logger.error('Error adding to processing queue', { error, userId })
       throw error
     }
   }

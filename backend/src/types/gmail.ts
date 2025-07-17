@@ -14,7 +14,7 @@ export interface GmailEmail {
 
 export interface EmailClassification {
   id: string
-  category: 'urgent' | 'action_needed' | 'fyi' | 'ignore'
+  category: 'urgent' | 'actionNeeded' | 'fyi' | 'ignore'
   confidence: number
   reason: string
 }

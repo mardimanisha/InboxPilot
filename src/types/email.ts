@@ -1,7 +1,7 @@
 export type EmailCategory = "urgent" | "actionNeeded" | "fyi" | "ignore";
 
 export interface Email {
-  id: number;
+  id: string;
   sender: string;
   subject: string;
   time: string;
