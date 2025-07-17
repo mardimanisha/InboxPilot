@@ -62,7 +62,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: 'https://inbox-pilot-nine.vercel.app/onboarding'
+          redirectTo: 'https://inbox-pilot-nine.vercel.app/onboarding',
+          scopes: 'https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/gmail.compose https://www.googleapis.com/auth/gmail.labels',
+          queryParams: {
+            access_type: 'offline',
+            prompt: 'consent'
+          }
         }
       })
 

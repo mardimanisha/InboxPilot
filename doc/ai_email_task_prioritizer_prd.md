@@ -43,12 +43,9 @@ Modern professionals are buried under email and task noise. Important messages a
 
 ## Success Metrics
 
--
-  > 70% of users interact with the daily digest.
--
-  > 30% faster average email response time.
--
-  > 50% of users create tasks from email weekly.
+- > 70% of users interact with the daily digest.
+- > 30% faster average email response time.
+- > 50% of users create tasks from email weekly.
 - User retention rate >40% after 30 days.
 
 ---
