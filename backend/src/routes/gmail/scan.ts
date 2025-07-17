@@ -29,12 +29,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Initialize Gmail service
-    const gmailService = new GmailServiceImpl()
-    await gmailService.initialize({
-      apiKey: process.env.GMAIL_API_KEY || '',
-      clientId: process.env.GMAIL_CLIENT_ID || '',
-      clientSecret: process.env.GMAIL_CLIENT_SECRET || ''
-    })
+    const gmailService = await GmailServiceImpl.create()
 
     // Perform inbox scan
     const result = await gmailService.scanInbox(scanRequest)
