@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import { EmailCategory } from "@/types/email";
 type FilterType = EmailCategory | "all";
 import { AlertCircle, Clock, Info, Mail, X } from "lucide-react";
-import supabase from "@/lib/supabaseClient";
 import { ProcessedEmail } from "../../types/gmail";
-import { RedisService } from "../../backend/src/services/redis";
-
+import { supabase } from "@/lib/supabaseClient";
 
 export function useDashboardEmails() {
   const [selectedFilter, setSelectedFilter] = useState<FilterType>("all");
@@ -25,16 +23,20 @@ export function useDashboardEmails() {
           throw new Error('User not authenticated');
         }
 
-        // Fetch processed emails from Redis
-        const redisService = RedisService.getInstance();
-        const processedEmails = await redisService.getProcessedEmails(session.user.id);
-        
-        // Sort emails by processedAt timestamp (newest first)
-        const sortedEmails = processedEmails.sort((a, b) => 
-          new Date(b.processedAt).getTime() - new Date(a.processedAt).getTime()
-        );
+        // Fetch processed emails from the API route
+        const response = await fetch('/api/emails', {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          credentials: 'same-origin',
+        });
 
-        setEmails(sortedEmails);
+        if (!response.ok) {
+          throw new Error('Failed to fetch emails');
+        }
+
+        const data = await response.json();
+        setEmails(data.emails);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch emails');
       } finally {

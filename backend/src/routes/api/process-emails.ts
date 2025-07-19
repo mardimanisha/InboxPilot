@@ -1,13 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { EmailProcessorService } from '../../../services/emailProcessor'
 import { createLogger } from '../../utils/logger'
+import { EmailProcessorService } from '../../services/emailProcessor'
 
 
 const logger = createLogger('EmailProcessingAPI')
 
+interface ProcessEmailsRequest {
+  userId: string;
+}
+
 export async function POST(request: NextRequest) {
   try {
-    const { userId } = await request.json()
+    const { userId } = await request.json() as ProcessEmailsRequest
     
     if (!userId) {
       return NextResponse.json(

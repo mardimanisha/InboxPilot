@@ -6,7 +6,7 @@ import { SummaryCard } from "./SummaryCard"
 import { EmailCategory } from "@/types/email"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Plus, Mail } from "lucide-react"
+import { Plus } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 type FilterType = EmailCategory | "all";
@@ -20,8 +20,6 @@ export default function DashboardContent() {
     handleFilterChange,
     loading,
     error,
-    getCategoryColor,
-    getCategoryIcon
   } = useDashboardEmails()
 
   // If no emails are found, trigger processing

@@ -1,11 +1,16 @@
-import supabase from '@/lib/supabaseClient'
+
 import { NextResponse } from 'next/server'
 import { GmailServiceImpl } from '../../services/gmail'
+import { supabase } from '../../lib/supabaseClient'
 
+
+interface ScanInboxRequest {
+  userId: string;
+}
 
 export async function POST(request: Request) {
   try {
-    const { userId } = await request.json()
+    const { userId } = await request.json() as ScanInboxRequest
     
     // Get user's session
     const { data: { session }, error: sessionError } = await supabase.auth.getSession()
