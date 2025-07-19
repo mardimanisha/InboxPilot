@@ -6,6 +6,7 @@ import { GmailApiClient } from './gmailClient'
 import { RedisQueueJob } from './redis'
 import { OpenAIService } from './openai'
 import { RedisService } from './redis'
+import { OnboardingService } from './onboarding'
 
 const logger = createLogger('GmailService')
 
@@ -53,10 +54,41 @@ export class GmailServiceImpl implements GmailService {
       }
       const client = this.gmailClient || new GmailApiClient(session.user)
       
+      // Update onboarding progress for email connection step
+      const onboardingService = OnboardingService.getInstance()
+      await onboardingService.updateProgress(
+        request.userId,
+        'connect_email',
+        'completed',
+        100,
+        undefined,
+        { connection_time: new Date().toISOString() }
+      )
+
+      // Update onboarding progress for inbox scanning step
+      await onboardingService.updateProgress(
+        request.userId,
+        'scan_inbox',
+        'in_progress',
+        0
+      )
+
       // Fetch emails from Gmail API
       const emails = await client.fetchEmails(
         request.maxResults || this.MAX_EMAILS_PER_REQUEST,
         request.pageToken
+      )
+
+      // Update progress based on email count
+      const progress = Math.min(
+        Math.round((emails.length / (request.maxResults || 100)) * 100),
+        100
+      )
+      await onboardingService.updateProgress(
+        request.userId,
+        'scan_inbox',
+        'in_progress',
+        progress
       )
 
       // Classify emails
@@ -64,6 +96,16 @@ export class GmailServiceImpl implements GmailService {
 
       // Store emails and classifications
       await this.storeEmailsAndClassifications(request.userId, emails, classifications)
+
+      // Update inbox scanning step to completed
+      await onboardingService.updateProgress(
+        request.userId,
+        'scan_inbox',
+        'completed',
+        100,
+        undefined,
+        { scanned_emails: emails.length }
+      )
 
       // Add to Redis queue for background processing
       await this.addToProcessingQueue(request.userId, emails, classifications)
@@ -142,6 +184,17 @@ export class GmailServiceImpl implements GmailService {
       if (emailError) {
         throw emailError
       }
+
+      // Update dashboard setup progress
+      const onboardingService = OnboardingService.getInstance()
+      await onboardingService.updateProgress(
+        userId,
+        'setup_dashboard',
+        'completed',
+        100,
+        undefined,
+        { emails_processed: emails.length }
+      )
 
       logger.info('Successfully stored emails and classifications', { userId, emailCount: emails.length })
     } catch (error) {

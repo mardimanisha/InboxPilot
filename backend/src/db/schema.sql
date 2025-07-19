@@ -46,6 +46,25 @@ CREATE INDEX IF NOT EXISTS idx_emails_date ON emails(date);
 CREATE INDEX IF NOT EXISTS idx_email_classifications_user_id ON email_classifications(user_id);
 CREATE INDEX IF NOT EXISTS idx_email_classifications_category ON email_classifications(category);
 
+-- Onboarding Progress table
+CREATE TABLE IF NOT EXISTS onboarding_progress (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  step_name TEXT NOT NULL,
+  status TEXT NOT NULL CHECK (status IN ('pending', 'in_progress', 'completed', 'failed')),
+  progress_percentage INTEGER DEFAULT 0,
+  started_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  completed_at TIMESTAMP WITH TIME ZONE,
+  error_message TEXT,
+  metadata JSONB,
+  UNIQUE(user_id, step_name)
+);
+
+-- Create indexes for onboarding_progress
+CREATE INDEX IF NOT EXISTS idx_onboarding_progress_user_id ON onboarding_progress(user_id);
+CREATE INDEX IF NOT EXISTS idx_onboarding_progress_step_name ON onboarding_progress(step_name);
+CREATE INDEX IF NOT EXISTS idx_onboarding_progress_status ON onboarding_progress(status);
+
 -- Create RLS policies
 ALTER TABLE emails ENABLE ROW LEVEL SECURITY;
 ALTER TABLE email_classifications ENABLE ROW LEVEL SECURITY;

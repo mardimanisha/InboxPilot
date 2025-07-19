@@ -82,11 +82,9 @@ export class RedisService {
       this.client.on('end', () => {
         logger.info('Redis client disconnected')
       })
-
-      await this.client.ping()
     } catch (error) {
-      logger.error('Error initializing Redis client', { error })
-      throw error
+      logger.error('Error initializing Redis client', { error });
+      throw error;
     }
   }
 
@@ -184,6 +182,127 @@ export class RedisService {
       // Reconnect and continue processing
       await this.initialize()
       this.processQueue()
+    }
+  }
+
+  async addToErrorQueue(error: EmailError): Promise<void> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      await this.client.rpush(this.ERRORS_KEY, JSON.stringify(error));
+    } catch (error) {
+      logger.error('Error adding to error queue', { error });
+      throw error;
+    }
+  }
+
+  async getRecentErrors(limit: number = 100): Promise<EmailError[]> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      const errors = await this.client.lrange(this.ERRORS_KEY, 0, limit - 1);
+      return errors.map(err => JSON.parse(err));
+    } catch (error) {
+      logger.error('Error getting recent errors', { error });
+      throw error;
+    }
+  }
+
+  async removeFromCache(emailId: string): Promise<void> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      await this.client.hdel(this.PROCESSED_KEY, emailId);
+    } catch (error) {
+      logger.error('Error removing from cache', { error });
+      throw error;
+    }
+  }
+
+  async storeMetrics(metrics: EmailMetrics): Promise<void> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      await this.client.hset(this.METRICS_KEY, metrics.timestamp, JSON.stringify(metrics));
+    } catch (error) {
+      logger.error('Error storing metrics', { error });
+      throw error;
+    }
+  }
+
+  async getLatestMetrics(): Promise<EmailMetrics | null> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      const metrics = await this.client.hgetall(this.METRICS_KEY);
+      const timestamps = Object.keys(metrics).sort().reverse();
+      if (timestamps.length === 0) return null;
+      
+      return JSON.parse(metrics[timestamps[0]]);
+    } catch (error) {
+      logger.error('Error getting latest metrics', { error });
+      throw error;
+    }
+  }
+
+  async storeErrorMetrics(errorStats: Record<string, number>): Promise<void> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      await this.client.hset(this.ERRORS_KEY + '_stats', new Date().toISOString(), JSON.stringify(errorStats));
+    } catch (error) {
+      logger.error('Error storing error metrics', { error });
+      throw error;
+    }
+  }
+
+  async storeHealthMetrics(health: RedisHealth): Promise<void> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      await this.client.hset(this.HEALTH_KEY, new Date().toISOString(), JSON.stringify(health));
+    } catch (error) {
+      logger.error('Error storing health metrics', { error });
+      throw error;
+    }
+  }
+
+  async checkHealth(): Promise<RedisHealth> {
+    try {
+      if (!this.client) {
+        await this.initialize()
+      }
+      
+      const info = await this.client.info();
+      const memoryUsage = info.split('\n').find(line => line.startsWith('used_memory:'))?.split(':')[1];
+      const latency = await this.client.ping();
+      
+      return {
+        ok: true,
+        latency: latency === 'PONG' ? 0 : 1, // Simplified latency check
+        memoryUsage: memoryUsage ? parseInt(memoryUsage) : 0
+      };
+    } catch (error) {
+      return {
+        ok: false,
+        latency: -1,
+        memoryUsage: 0,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      };
     }
   }
 
