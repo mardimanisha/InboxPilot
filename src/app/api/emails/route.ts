@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
-import { RedisService } from '../../../../backend/src/services/redis'
+import { RedisService, ProcessedEmail } from '../../../../backend/src/services/redis'
 import { createServerClient } from '@supabase/ssr'
 
 export async function GET() {
@@ -36,7 +36,7 @@ export async function GET() {
 
     // Fetch processed emails from Redis
     const redisService = RedisService.getInstance()
-    let processedEmails: any[] = []
+    let processedEmails: ProcessedEmail[] = []
     try {
       processedEmails = await redisService.getProcessedEmails(session.user.id)
     } catch (redisError) {
