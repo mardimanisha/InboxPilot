@@ -36,7 +36,16 @@ export async function GET() {
 
     // Fetch processed emails from Redis
     const redisService = RedisService.getInstance()
-    const processedEmails = await redisService.getProcessedEmails(session.user.id)
+    let processedEmails: any[] = []
+    try {
+      processedEmails = await redisService.getProcessedEmails(session.user.id)
+    } catch (redisError) {
+      // If Redis is unavailable or returns an error, gracefully degrade by
+      // returning an empty list instead of propagating the failure. This keeps
+      // the dashboard functional while still logging the error for later
+      // investigation.
+      console.error('Redis error while fetching emails:', redisError)
+    }
     
     // Sort emails by processedAt timestamp (newest first)
     const sortedEmails = processedEmails.sort((a, b) => 
