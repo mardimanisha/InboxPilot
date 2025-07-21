@@ -7,6 +7,7 @@ export interface Profile {
     bio: string;
     location: string;
     timezone: string;
+    avatar_url?: string;
   }
   
   export interface AccountStats {
