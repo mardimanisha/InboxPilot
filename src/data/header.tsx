@@ -1,8 +1,7 @@
-// data/headers.ts
+
 import { Button } from "@/components/ui/button";
 import { Edit, LogOut, Plus, Bell, Search } from "lucide-react";
 import { HeaderConfig } from "@/types/header";
-import { toggleEditMode } from "@/hooks/useProfile";
 
 export const headerConfigs: Record<string, HeaderConfig> = {
   profile: {
@@ -15,7 +14,7 @@ export const headerConfigs: Record<string, HeaderConfig> = {
       {
         id: "edit",
         element: (
-          <Button onClick={toggleEditMode}>
+          <Button>
             <Edit className="h-4 w-4 mr-2" />
             Edit Profile
           </Button>
