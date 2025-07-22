@@ -10,8 +10,8 @@ export async function GET(request: Request) {
       return NextResponse.redirect(new URL('/auth/error', process.env.NEXT_PUBLIC_URL))
     }
 
-    // Exchange the code for a session using AuthService
-    const result = await AuthService.signInWithGoogle()
+    // Exchange the code for a session and persist tokens
+    const result = await AuthService.exchangeCodeForSession(code)
 
     if ('message' in result) {
       return NextResponse.redirect(new URL(`/auth/error?error=${result.message}`, process.env.NEXT_PUBLIC_URL))

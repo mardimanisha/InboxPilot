@@ -39,6 +39,58 @@ export class AuthService {
     }
   }
 
+  static async exchangeCodeForSession(code: string): Promise<AuthResponse | AuthError> {
+    try {
+      logger.info('Exchanging authorization code for session');
+      const { data, error } = await supabase.auth.exchangeCodeForSession(code);
+
+      if (error) {
+        logger.error('Code exchange error:', { error });
+        return {
+          message: error.message,
+          status: error.status,
+        };
+      }
+
+      if (!data.session || !data.user) {
+        logger.error('No session or user returned from code exchange');
+        return {
+          message: 'Failed to create session from code',
+          status: 401,
+        };
+      }
+
+      const { user, session } = data;
+      const { provider_token, provider_refresh_token } = session;
+
+      if (provider_token) {
+        logger.info(`Updating tokens for user: ${user.id}`);
+        const { error: updateError } = await supabase
+          .from('users')
+          .update({
+            access_token: provider_token,
+            refresh_token: provider_refresh_token,
+          })
+          .eq('id', user.id);
+
+        if (updateError) {
+          logger.error('Failed to update user tokens in database:', { updateError });
+          // Non-fatal error, we can proceed with the session
+        }
+      }
+
+      logger.info('Successfully exchanged code for session', { userId: user.id });
+      return { user, session };
+
+    } catch (error) {
+      logger.error('Unexpected error in code exchange:', { error });
+      return {
+        message: 'Failed to exchange code for session',
+        status: 500,
+      };
+    }
+  }
+
   static async getSession(): Promise<AuthResponse | AuthError> {
     try {
       logger.info('Fetching session')
