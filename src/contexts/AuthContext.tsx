@@ -1,6 +1,6 @@
 "use client"
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
-import supabase from '@/lib/supabaseClient'
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { User as SupabaseUser, Session, AuthChangeEvent } from '@supabase/auth-js'
 import { useRouter } from 'next/navigation'
 
@@ -20,6 +20,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const router = useRouter()
+  const supabase = createClientComponentClient()
 
   useEffect(() => {
     // Initialize auth state
@@ -62,7 +63,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const { error: authError } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: {
-          redirectTo: `${process.env.NEXT_PUBLIC_URL}/onboarding`
+          redirectTo: `${process.env.NEXT_PUBLIC_URL}/api/auth/callback`
         }
       })
 

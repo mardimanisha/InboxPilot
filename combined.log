@@ -1,0 +1,1814 @@
+{
+  service: 'EmailService',
+  error: TypeError: supabase_1.supabase.from(...).insert(...).select is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:39:10)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.saveEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:23:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:48:41
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:44:57)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T03:57:25.287Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: supabase_1.supabase.from(...).insert(...).select is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:39:10)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.saveEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:23:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:59:33
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:55:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T03:57:25.351Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:93:41
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:64:63)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T03:57:25.437Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:64:38
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\ai.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:63:47)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:15:51.107Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T04:15:51.250Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:55
+      at Array.map (<anonymous>)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:37)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:15:51.253Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T04:15:51.295Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T04:15:51.297Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T04:15:51.303Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.434Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.444Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.443Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.569Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.572Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:15:58.571Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:64:38
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\ai.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:63:47)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:43:36.022Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T04:43:36.104Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:55
+      at Array.map (<anonymous>)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:37)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:43:36.107Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T04:43:36.134Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T04:43:36.136Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T04:43:36.143Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:43.983Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:43.993Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:43.992Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:44.121Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:44.124Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:44.123Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:64:38
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\ai.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:63:47)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:43:50.304Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T04:43:50.422Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:55
+      at Array.map (<anonymous>)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:37)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T04:43:50.423Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T04:43:50.453Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+      '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T04:43:50.455Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T04:43:50.462Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.832Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.843Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:95:5)',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.841Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.976Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.980Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T04:43:53.977Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:43.849Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:43.868Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:43.866Z'
+}
+{
+  service: 'UserService',
+  message: "Error updating user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:44.001Z'
+}
+{
+  service: 'GmailService',
+  message: "Failed to refresh access token: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:44.007Z'
+}
+{
+  service: 'UserService',
+  message: "Failed to update user tokens: TypeError: Cannot read properties of undefined (reading 'status')",
+  details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+    '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+  hint: '',
+  code: '',
+  level: 'error',
+  timestamp: '2025-07-23T08:54:44.004Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:64:38
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\ai.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\ai.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:63:47)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T08:54:45.047Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T08:54:45.124Z'
+}
+{
+  service: 'AIService',
+  error: TypeError: _a.toISOString is not a function
+      at Function.createUserPrompt (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:226:29)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:51:31)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:4:12)
+      at Function.classifyEmail (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:47:16)
+      at D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:55
+      at Array.map (<anonymous>)
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:107:37)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T08:54:45.127Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T08:54:45.158Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T08:54:45.171Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T08:54:45.182Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T09:51:25.755Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:146:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:144:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T09:51:26.534Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T09:51:25.808Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T09:51:25.812Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T09:51:25.824Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:170:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:160:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T09:51:26.580Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:153:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:185:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:175:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T09:51:26.624Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T09:59:07.575Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:146:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:144:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T09:59:08.215Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T09:59:07.603Z'
+}
+{
+  service: 'AIService',
+  error: {
+    message: "TypeError: Cannot read properties of undefined (reading 'status')",
+    details: "TypeError: Cannot read properties of undefined (reading 'status')\n" +
+      '    at D:\\Murph\\InboxPilot\\node_modules\\@supabase\\postgrest-js\\src\\PostgrestBuilder.ts:110:24',
+    hint: '',
+    code: ''
+  },
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T09:59:07.607Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T09:59:07.616Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:170:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:160:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T09:59:08.260Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:153:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:185:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:175:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T09:59:08.289Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:30:39.453Z'
+}
+{
+  service: 'AIService',
+  message: 'Successfully classified 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:30:39.464Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T12:30:39.479Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:35:30.493Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:35:30.561Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\index.js:343:7),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:35:30.563Z'
+}
+{
+  service: 'AIService',
+  message: 'Successfully classified 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:35:30.567Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T12:35:30.576Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:146:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:144:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T12:36:36.848Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:170:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:160:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:36:36.895Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:153:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:185:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:175:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:36:36.913Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:36:36.912Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:36:36.991Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:36:36.992Z'
+}
+{
+  service: 'AIService',
+  message: 'Successfully classified 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:36:36.993Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T12:36:36.999Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:149:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:147:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T12:39:26.618Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:173:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:163:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:39:26.717Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:153:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:188:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:178:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:39:26.741Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:39:26.902Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:39:26.986Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:39:26.987Z'
+}
+{
+  service: 'AIService',
+  message: 'Successfully classified 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:39:26.989Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T12:39:26.995Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:152:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:150:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T12:50:14.694Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:156:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:176:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:166:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:50:14.810Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:153:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:109:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:191:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:181:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T12:50:14.874Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:50:14.897Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:50:15.179Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T12:50:15.180Z'
+}
+{
+  service: 'AIService',
+  message: 'Successfully classified 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T12:50:15.181Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T12:50:15.278Z'
+}
+{
+  service: 'EmailService',
+  error: Error: Failed to save emails
+      at D:\Murph\InboxPilot\test\email.service.test.ts:152:27
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:150:62)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error saving emails:',
+  timestamp: '2025-07-23T14:36:52.682Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.order is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:166:50)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:122:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:176:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:166:65)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T14:36:52.871Z'
+}
+{
+  service: 'EmailService',
+  error: TypeError: queryBuilder.eq is not a function
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\email.service.ts:163:70)
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\backend\src\services\email.service.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\backend\src\services\email.service.ts:4:12)
+      at Function.getUserEmails (D:\Murph\InboxPilot\backend\src\services\email.service.ts:122:16)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:191:43
+      at Generator.next (<anonymous>)
+      at D:\Murph\InboxPilot\test\email.service.test.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (D:\Murph\InboxPilot\test\email.service.test.ts:4:12)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\email.service.test.ts:181:52)
+      at Promise.finally.completed (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1559:28)
+      at new Promise (<anonymous>)
+      at callAsyncCircusFn (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1499:10)
+      at _callCircusTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1009:40)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at _runTest (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:949:3)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:839:13)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at _runTestsForDescribeBlock (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:829:11)
+      at run (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:757:3)
+      at runAndTransformResultsToJestFormat (D:\Murph\InboxPilot\node_modules\jest-circus\build\jestAdapterInit.js:1920:21)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:101:19)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'Unexpected error fetching user emails:',
+  timestamp: '2025-07-23T14:36:52.902Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T14:36:53.163Z'
+}
+{
+  service: 'AIService',
+  message: 'Classifying 1 emails for user user123',
+  level: 'info',
+  timestamp: '2025-07-23T14:36:53.358Z'
+}
+{
+  service: 'AIService',
+  error: Error: OpenAI API error
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:57:45)
+      at D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:295:43
+      at mockConstructor.<anonymous> (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:312:13)
+      at new mockConstructor (D:\Murph\InboxPilot\node_modules\jest-mock\build\index.js:102:19)
+      at Object.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:16:16)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at Runtime.requireModuleOrMock (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:962:21)
+      at Object.<anonymous> (D:\Murph\InboxPilot\test\ai.service.test.ts:1:1)
+      at Runtime._execModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:1266:24)
+      at Runtime._loadModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:942:12)
+      at Runtime.requireModule (D:\Murph\InboxPilot\node_modules\jest-runtime\build\index.js:830:12)
+      at jestAdapter (D:\Murph\InboxPilot\node_modules\jest-circus\build\runner.js:95:13)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at runTestInternal (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:275:16)
+      at runTest (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:343:7)
+      at Object.worker (D:\Murph\InboxPilot\node_modules\jest-runner\build\testWorker.js:497:12),
+  level: 'error',
+  message: 'AI classification failed, falling back to basic classification',
+  timestamp: '2025-07-23T14:36:53.359Z'
+}
+{
+  service: 'AIService',
+  classifications: [
+    {
+      emailId: 'email1',
+      userId: 'user123',
+      classificationType: 'priority',
+      classificationScore: 0.7,
+      classificationData: {
+        priority: 'low',
+        category: 'REFERENCE',
+        reasoning: 'Basic classification based on keywords',
+        suggestedActions: [ 'Review when you have time' ]
+      }
+    }
+  ],
+  level: 'error',
+  message: 'No data returned when saving email classifications',
+  timestamp: '2025-07-23T14:36:53.366Z'
+}
+{
+  service: 'AIService',
+  error: Error: No data returned from Supabase when saving email classifications
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:183:15)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  classifications: [
+    {
+      emailId: 'email1',
+      userId: 'user123',
+      classificationType: 'priority',
+      classificationScore: 0.7,
+      classificationData: {
+        priority: 'low',
+        category: 'REFERENCE',
+        reasoning: 'Basic classification based on keywords',
+        suggestedActions: [ 'Review when you have time' ]
+      }
+    }
+  ],
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T14:36:53.369Z'
+}
+{
+  service: 'AIService',
+  error: Error: No data returned from Supabase when saving email classifications
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:183:15)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  level: 'error',
+  message: 'Failed to classify emails for user user123:',
+  timestamp: '2025-07-23T14:36:53.379Z'
+}
+{
+  service: 'AIService',
+  message: 'No emails to classify',
+  level: 'info',
+  timestamp: '2025-07-23T14:36:53.391Z'
+}
+{
+  service: 'AIService',
+  classifications: [
+    {
+      emailId: 'email1',
+      userId: 'user123',
+      classificationType: 'priority',
+      classificationScore: 0.85,
+      classificationData: {
+        priority: 'medium',
+        category: 'PROMOTIONAL',
+        reasoning: 'Email appears to be a marketing message',
+        suggestedActions: [ 'Archive', 'Mark as read' ]
+      }
+    }
+  ],
+  level: 'error',
+  message: 'No data returned when saving email classifications',
+  timestamp: '2025-07-23T14:36:53.400Z'
+}
+{
+  service: 'AIService',
+  error: Error: No data returned from Supabase when saving email classifications
+      at Function.<anonymous> (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:183:15)
+      at Generator.next (<anonymous>)
+      at fulfilled (D:\Murph\InboxPilot\backend\src\services\ai.service.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:95:5),
+  classifications: [
+    {
+      emailId: 'email1',
+      userId: 'user123',
+      classificationType: 'priority',
+      classificationScore: 0.85,
+      classificationData: {
+        priority: 'medium',
+        category: 'PROMOTIONAL',
+        reasoning: 'Email appears to be a marketing message',
+        suggestedActions: [ 'Archive', 'Mark as read' ]
+      }
+    }
+  ],
+  level: 'error',
+  message: 'Failed to save email classifications',
+  timestamp: '2025-07-23T14:36:53.409Z'
+}
