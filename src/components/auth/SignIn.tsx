@@ -3,19 +3,20 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Shield, Zap, ArrowLeft } from "lucide-react"
+import { Mail, Shield, Zap, ArrowLeft, Router } from "lucide-react"
 import Link from "next/link"
-import { useAuth } from "@/contexts/AuthContext"
+import { useRouter } from 'next/navigation';
 import Logo from "../common/Logo"
 
 export default function SignIn() {
-    const { signIn } = useAuth()
+
+    const router = useRouter()
     const [isLoading, setIsLoading] = useState(false)
 
     const handleGoogleSignIn = async () => {
         try {
             setIsLoading(true)
-            await signIn()
+            router.push('/onboarding')
         } catch (error) {
             console.error('Sign in error:', error)
         } finally {

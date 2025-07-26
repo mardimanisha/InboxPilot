@@ -22,7 +22,9 @@ export default function Header() {
         {/* Actions */}
         <div className="flex items-center space-x-3">
           <Link href="/auth/signin">
-            <Button className="bg-gray-900 hover:scale-x-110 transition-transform duration-200 text-white rounded-full px-6 cursor-pointer">Sign up →</Button>
+            <Button className="bg-gray-900 hover:scale-x-110 transition-transform duration-200 text-white rounded-full px-6 cursor-pointer">
+              Get Started
+            </Button>
           </Link>
         </div>
       </div>

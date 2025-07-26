@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Play } from 'lucide-react'
@@ -31,16 +33,20 @@ export default function HeroSection() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                    <Link href="/auth/signin">
-                        <Button size="lg" className="flex items-center cursor-pointer bg-gray-900 hover:scale-x-105 transition-transform duration-200 text-white px-8 py-4 text-lg rounded-full">
-                            Get Started with Google
-                            <ArrowRight className="ml-2 h-5 w-5" />
+                        <Link href="/auth/signin" className="flex">
+                            <Button 
+                                size="lg"
+                                className="flex items-center bg-gray-900 hover:scale-105 transition-transform duration-200 text-white px-8 py-4 text-lg rounded-full"
+                            >
+                                Get Started
+                                <ArrowRight className="ml-2 h-5 w-5" />
+                            </Button>
+                        </Link>
+                        
+                        <Button variant="ghost" size="lg" className="flex items-center cursor-pointer px-8 py-4 text-lg text-gray-600 hover:text-gray-900">
+                            <Play className="mr-2 h-5 w-5" />
+                            Watch Demo
                         </Button>
-                    </Link>
-                    <Button variant="ghost" size="lg" className="flex items-center cursor-pointer px-8 py-4 text-lg text-gray-600 hover:text-gray-900">
-                        <Play className="mr-2 h-5 w-5" />
-                        Watch Demo
-                    </Button>
                     </div>
                 </div>
             </div>

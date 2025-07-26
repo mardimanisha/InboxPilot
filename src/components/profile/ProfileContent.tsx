@@ -8,60 +8,35 @@ import { ProfileForm } from "./ProfileForm";
 import { MOCK_ACCOUNT_STATS, MOCK_CONNECTED_ACCOUNTS, TIMEZONE_OPTIONS } from "@/data/profile";
 import { AccountStats } from "./AccountStats";
 import { ConnectedAccounts } from "./ConnectedAccounts";
-import { LogoutButton } from "./LogoutButton";
 import { AlertCircle, Camera, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import supabase from "@/lib/supabaseClient";
-import { useAuth } from "@/contexts/AuthContext";
 import { Skeleton } from "../ui/skeleton";
 import { Alert, AlertDescription, AlertTitle } from "../ui/alert";
 
+
 export default function ProfilePage() {
-  const { user } = useAuth();
   const {
     profile,
     isEditing,
     updateProfile,
     isLoading,
     error,
-    refreshProfile,
-    handleEditToggle,
-    handleSave,
-    handleCancel
+    saveProfile,
   } = useProfile();
 
-  const handleImageUpload = async (file: File) => {
-    if (!profile) return;
-    
+  const handleImageUpdate = async (file: File) => {
     try {
-      // Upload the file to Supabase Storage
-      const fileExt = file.name.split('.').pop();
-      const fileName = `${profile.email}/${Date.now()}.${fileExt}`;
-      const { error: uploadError } = await supabase.storage
-        .from('avatars')
-        .upload(fileName, file);
-
-      if (uploadError) throw uploadError;
-
-      // Get the public URL
-      const { data: { publicUrl } } = supabase.storage
-        .from('avatars')
-        .getPublicUrl(fileName);
-
-      if (!user) throw new Error('User not authenticated');
+      // In a real app, you would upload the file to a server
+      // For now, we'll just create a local URL for the file
+      const imageUrl = URL.createObjectURL(file);
       
-      // Update the user's profile with the new avatar URL
-      const { error: updateError } = await supabase
-        .from('profiles')
-        .update({ avatar_url: publicUrl })
-        .eq('id', user.id);
-
-      if (updateError) throw updateError;
-
-      // Refresh the profile data
-      refreshProfile();
+      // Update local state
+      updateProfile({ avatar_url: imageUrl });
+      
+      return imageUrl;
     } catch (error) {
-      console.error('Error uploading image:', error);
+      console.error('Error updating profile image:', error);
+      throw error;
     }
   };
 
@@ -113,7 +88,7 @@ export default function ProfilePage() {
           <Button 
             variant="outline" 
             size="sm" 
-            onClick={refreshProfile}
+            onClick={() => saveProfile(profile)}
             disabled={isLoading}
           >
             {isLoading ? (
@@ -137,7 +112,6 @@ export default function ProfilePage() {
                 <ProfileAvatar
                   profile={profile}
                   isEditing={isEditing}
-                  onImageUpload={handleImageUpload}
                   isLoading={isLoading}
                 />
               </CardContent>
@@ -157,32 +131,27 @@ export default function ProfilePage() {
                   timezoneOptions={TIMEZONE_OPTIONS}
                 />
                 
-                <div className="mt-6 flex justify-end space-x-3">
+                <div className="flex justify-end space-x-2">
                   {isEditing ? (
                     <>
                       <Button
-                        type="button"
                         variant="outline"
-                        onClick={handleCancel}
+                        onClick={() => saveProfile(profile)}
+                        disabled={isLoading}
+                      >
+                        {isLoading ? 'Saving...' : 'Save Changes'}
+                      </Button>
+                      <Button
+                        variant="outline"
+                        onClick={() => updateProfile(profile)}
                         disabled={isLoading}
                       >
                         Cancel
                       </Button>
-                      <Button
-                        type="button"
-                        onClick={handleSave}
-                        disabled={isLoading}
-                      >
-                        {isLoading ? (
-                          <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
-                        ) : null}
-                        Save Changes
-                      </Button>
                     </>
                   ) : (
                     <Button
-                      type="button"
-                      onClick={handleEditToggle}
+                      onClick={() => updateProfile(profile)}
                       disabled={isLoading}
                     >
                       Edit Profile
@@ -199,11 +168,6 @@ export default function ProfilePage() {
                 onConnect={handleAccountConnect}
                 onDisconnect={handleAccountDisconnect}
               />
-              <LogoutButton 
-                variant="ghost"
-                className="text-destructive hover:text-destructive/90 hover:bg-destructive/10"
-              />
-           
           </div>
         </div>
       </div>

@@ -19,6 +19,7 @@
     "@radix-ui/react-switch": "^1.2.5",
     "@remix-run/node": "^2.16.8",
     "@supabase/auth-helpers-nextjs": "^0.10.0",
+    "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.51.0",
     "@types/bull": "^4.10.4",
     "bull": "^4.16.5",

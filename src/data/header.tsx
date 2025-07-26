@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Edit, LogOut, Plus, Bell, Search } from "lucide-react";
+import { Edit, Plus, Bell, Search } from "lucide-react";
 import { HeaderConfig } from "@/types/header";
 
 export const headerConfigs: Record<string, HeaderConfig> = {
@@ -29,16 +29,7 @@ export const headerConfigs: Record<string, HeaderConfig> = {
       text: "⚙️ Settings",
       className: "bg-purple-100 text-purple-800",
     },
-    actions: [
-      {
-        id: "logout",
-        element: (
-          <Button variant="outline" size="sm">
-            <LogOut className="h-4 w-4" />
-          </Button>
-        ),
-      },
-    ],
+    actions: [],
   },
 
   dashboard: {
